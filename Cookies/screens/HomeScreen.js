@@ -66,7 +66,7 @@ const HomeScreen = () => {
           <Image style={styles.profileImage} source={require('../assets/profile.png')} />
           <View>
             <Text style={[styles.welcomeText, isDarkTheme && styles.darkText]}>Welcome back,</Text>
-            <Text style={[styles.userName, isDarkTheme && styles.darkText]}>Bright Agbemenu</Text>
+            <Text style={[styles.userName, isDarkTheme && styles.darkText]}>Adjei Elijah Elmen</Text>
           </View>
         </View>
         <Icon name="search" size={24} color={isDarkTheme ? '#fff' : '#000'} />

@@ -43,9 +43,13 @@ const SettingsScreen = ({ navigation }) => {
         {['Language', 'My Profile', 'Contact Us', 'Change Password', 'Privacy Policy'].map((item, index) => (
           <View key={index} style={styles.setting}>
             <Text style={[styles.settingText, isDarkTheme && styles.darkText]}>{item}</Text>
+            <Text style={[styles.settingText, isDarkTheme && styles.darkText]}></Text>
+            <View style={styles.arrowContainer}>
+                <Text style={{ color: '#808080', fontSize: 20 }}> {'>'} </Text>
+              </View>
           </View>
         ))}
-        <View style={styles.set}>
+        <View style={styles.setting}>
           <Text style={[styles.settingText, isDarkTheme && styles.darkText]}>Theme</Text>
           <Switch value={isDarkTheme} onValueChange={toggleTheme} />
         </View>
@@ -65,7 +69,7 @@ const styles = StyleSheet.create({
   contentContainer: {
     flex: 1,
     padding: 20,
-      },
+  },
   darkContainer: {
     backgroundColor: '#333',
   },
@@ -79,18 +83,10 @@ const styles = StyleSheet.create({
   darkText: {
     color: '#fff',
   },
-  set: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingVertical: 15,
-    fontStyle: "Arial"
-
-  },
   setting: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center', 
+    alignItems: 'center',
     paddingVertical: 15,
     borderBottomWidth: 1,
     borderBottomColor: '#ddd',
@@ -105,7 +101,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     backgroundColor: '#f0f2f5',
     marginBottom: 30,
-  }, 
+  },
   darkFooter: {
     backgroundColor: '#222',
     marginBottom: 30,
